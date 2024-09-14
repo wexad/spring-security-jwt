@@ -34,7 +34,7 @@ public class AuthController {
         return user;
     }
 
-    @PostMapping("/token")
+    @PostMapping("/signIn")
     public String getToken(@RequestBody TokenRequestDTO tokenRequestDTO) {
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(tokenRequestDTO.username(), tokenRequestDTO.password());
         authenticationManager.authenticate(authenticationToken);
